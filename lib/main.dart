@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:study_squad/Class_page.dart';
+import 'package:study_squad/firstScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Class_pages(),
+      home: const firstscreen(),
     );
   }
 }
