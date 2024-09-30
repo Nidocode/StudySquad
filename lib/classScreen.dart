@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Class_pages extends StatefulWidget {
-  const Class_pages({super.key});
+class Classscreen extends StatefulWidget {
+  const Classscreen({super.key});
 
   @override
-  State<Class_pages> createState() => _Class_pages();
+  State<Classscreen> createState() => _Classscreen();
 }
 
-class _Class_pages extends State<Class_pages> {
+class _Classscreen extends State<Classscreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
