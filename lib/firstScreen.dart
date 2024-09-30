@@ -11,12 +11,12 @@ class firstscreen extends StatelessWidget {
       body: Column(
         children: [
         Container(width: 240,  height: 220, alignment: Alignment.center,
-         margin: EdgeInsets.only(top: 35 , bottom: 20), decoration: BoxDecoration(
+        margin: EdgeInsets.only(top: 35 , bottom: 20), decoration: BoxDecoration(
           image: DecorationImage(
             fit:BoxFit.cover,
             image:AssetImage("images/hello.png"),
           )
-         ),
+        ),
         ),
 
         Container(alignment: Alignment.center,
@@ -38,10 +38,10 @@ class firstscreen extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)))
           ),
-         ),
-         ),
-         Container(width: 265, height: 65, padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-         child: ElevatedButton(child: Text("SIGNUP", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,
+          ),
+          ),
+          Container(width: 265, height: 65, padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+          child: ElevatedButton(child: Text("SIGNUP", textAlign: TextAlign.center, style: TextStyle(fontSize: 18,
           fontWeight: FontWeight.w600, color: Color.fromARGB(255, 255, 255, 255), letterSpacing: 2,),
           ),
           onPressed: (){Navigator.pushNamed(context, "signup");}, 
@@ -49,7 +49,7 @@ class firstscreen extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)))
           ),
-         ),
+        ),
         ),
       ]),
     );
