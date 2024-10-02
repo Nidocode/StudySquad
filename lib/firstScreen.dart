@@ -14,7 +14,7 @@ class firstscreen extends StatelessWidget {
         margin: EdgeInsets.only(top: 35 , bottom: 20), decoration: BoxDecoration(
           image: DecorationImage(
             fit:BoxFit.cover,
-            image:AssetImage("images/hello.png"),
+            image:AssetImage("lib/images/hello.png"),
           )
         ),
         ),

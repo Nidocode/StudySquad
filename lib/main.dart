@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:study_squad/classScreen.dart';
 import 'package:study_squad/firstScreen.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const firstscreen(),
         "classScreen":(context) => const Classscreen(),
+        
         
       },
     );
