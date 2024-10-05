@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/loginScreen.dart';
+import 'package:study_squad/loginScreen.dart';
+
 
 class Signupscreen extends StatelessWidget {
   const Signupscreen({super.key});

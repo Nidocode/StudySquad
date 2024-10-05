@@ -158,8 +158,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
             SizedBox(height: 30,),
 
-            isLastQ
-              ? SizedBox(
+            if (isLastQ) SizedBox(
                 height: 50,
                 width: 150,
                 child: ElevatedButton( // if it the last question navigate to the result screen  
@@ -177,9 +176,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       },
                       child: Text("Finish", style: TextStyle(color: Colors.white, fontSize: 16),),
                     ),
-              )
-
-              : SizedBox(
+              ) else SizedBox(
                 height: 50,
                 width: 150,
                 child: ElevatedButton(
