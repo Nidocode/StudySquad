@@ -9,9 +9,9 @@ class Loginscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:Colors.white,
-       appBar: AppBar(
+      appBar: AppBar(
           elevation: 3,
-          backgroundColor: Color.fromRGBO(0, 142, 204, 1),
+          backgroundColor: Color.fromRGBO(54, 174, 226, 0.992),
           leading: IconButton(
             onPressed: () {Navigator.pushNamed(context, "/");},
             icon: Icon(
@@ -45,12 +45,12 @@ class Loginscreen extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(58, 20, 80, 15),
             child: TextField(
               textInputAction: TextInputAction.next,
-              cursorColor: Color.fromRGBO(0, 142, 204, 1),
+              cursorColor: Color.fromRGBO(54, 174, 226, 0.992),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.all(15),
                 hintText: "Username",
                 prefixIcon: Icon(Icons.person),
-                prefixIconColor: Color.fromRGBO(0, 142, 204, 1),
+                prefixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
               ),
             ),
           ),
@@ -60,12 +60,12 @@ class Loginscreen extends StatelessWidget {
             child: TextField(
               obscureText: true,
               textInputAction: TextInputAction.next,
-              cursorColor: Color.fromRGBO(0, 142, 204, 1),
+              cursorColor: Color.fromRGBO(54, 174, 226, 0.992),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.all(15),
                 hintText: "Password",
                 prefixIcon: Icon(Icons.visibility_off),
-                prefixIconColor: Color.fromRGBO(0, 142, 204, 1),
+                prefixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
               ),
             ),
           ),
@@ -89,7 +89,7 @@ class Loginscreen extends StatelessWidget {
             child: ElevatedButton(
               onPressed: (){}, 
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
+                backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13))),
               ),
               child: Text(
@@ -126,10 +126,10 @@ class Loginscreen extends StatelessWidget {
                   "SignUp",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(0, 142, 204, 1),
+                    color: Color.fromRGBO(54, 174, 226, 0.992),
                     fontSize: 14.5,
                     decoration: TextDecoration.underline,
-                    decorationColor: Color.fromRGBO(0, 142, 204, 1),
+                    decorationColor: Color.fromRGBO(54, 174, 226, 0.992),
                   ),
                 ),
               ),

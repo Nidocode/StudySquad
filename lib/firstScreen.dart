@@ -35,7 +35,7 @@ class firstscreen extends StatelessWidget {
           ),
           onPressed: (){Navigator.pushNamed(context, "login");}, 
           style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
+          backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)))
           ),
           ),
@@ -46,7 +46,7 @@ class firstscreen extends StatelessWidget {
           ),
           onPressed: (){Navigator.pushNamed(context, "signup");}, 
           style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
+          backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)))
           ),
         ),
