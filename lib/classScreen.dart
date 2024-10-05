@@ -63,10 +63,10 @@ class _Classscreen extends State<Classscreen> {
         body: TabBarView(
           children: [
             QuizScreen(),
-            ResourcesPage(),
             Center(
-              child: Text("resources"),
+              child: Text("statistics"),
             ),
+            ResourcesPage(),
             Center(
               child: Text("study technique"),
             )
