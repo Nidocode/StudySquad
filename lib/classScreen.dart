@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_squad/classTabs/quiz/quizzes.dart';
+import 'package:study_squad/classTabs/resources.dart';
 
 class Classscreen extends StatefulWidget {
   const Classscreen({super.key});
@@ -62,9 +63,7 @@ class _Classscreen extends State<Classscreen> {
         body: TabBarView(
           children: [
             QuizScreen(),
-            Center(
-              child: Text("statistics"),
-            ),
+            ResourcesPage(),
             Center(
               child: Text("resources"),
             ),
