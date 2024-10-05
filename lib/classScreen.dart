@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_squad/classTabs/quiz/quizzes.dart';
 
 class Classscreen extends StatefulWidget {
   const Classscreen({super.key});
@@ -18,7 +19,7 @@ class _Classscreen extends State<Classscreen> {
           toolbarHeight: 100,
           centerTitle: true,
           title: Text(
-            "MODELS & METHODS",
+            "Mobile App Engineering",
             style: TextStyle(color: Colors.white, fontSize: 26),
           ),
           backgroundColor: Color.fromRGBO(54, 174, 226, 0.992),
@@ -60,9 +61,7 @@ class _Classscreen extends State<Classscreen> {
         ),
         body: TabBarView(
           children: [
-            Center(
-              child: Text("quizzes"),
-            ),
+            QuizScreen(),
             Center(
               child: Text("statistics"),
             ),
