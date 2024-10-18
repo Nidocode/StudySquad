@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /*
   If (no options is chosen)
@@ -33,6 +34,7 @@ class AnswerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     bool isCorrectAnswer = currentIndex == correctAnswerIndex;
     bool isWrongAnswer = !isCorrectAnswer && isSelected;
     return Padding(padding: EdgeInsets.symmetric(vertical: 10.0),
@@ -53,7 +55,7 @@ class AnswerCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Expanded(child: Text(option, style: TextStyle(fontSize: 15 ),)),
+            Expanded(child: Text(option, style: GoogleFonts.titilliumWeb(textStyle:TextStyle(fontSize: 15 ) ),)),
             SizedBox(height: 7,),
             isCorrectAnswer
               ? buildCorrectIcon()
@@ -75,7 +77,7 @@ class AnswerCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Expanded(child: Text(option, style: TextStyle(fontSize: 15 ),)),
+            Expanded(child: Text(option, style: GoogleFonts.titilliumWeb(textStyle: TextStyle(fontSize: 15 ) ),)),
           ],
         ) ,
     )
@@ -84,7 +86,8 @@ class AnswerCard extends StatelessWidget {
 }
 
 
-Widget buildCorrectIcon() => SizedBox(
+Widget buildCorrectIcon() {
+  return SizedBox(
   height: 20,
   width: 20,
   child: const CircleAvatar(
@@ -97,8 +100,9 @@ Widget buildCorrectIcon() => SizedBox(
         ),
       ),
 );
-
-Widget buildWrongIcon() => SizedBox(
+}
+Widget buildWrongIcon() {
+  return SizedBox(
   height: 20,
   width: 20,
   child: const CircleAvatar(
@@ -111,3 +115,4 @@ Widget buildWrongIcon() => SizedBox(
         ),
       ),
 );
+}

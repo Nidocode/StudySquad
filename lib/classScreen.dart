@@ -1,6 +1,15 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:study_squad/classTabs/quiz/quizzes.dart';
 import 'package:study_squad/classTabs/resources.dart';
+import 'package:study_squad/classTabs/statistics.dart';
+import 'package:study_squad/classTabs/studyTechnique.dart';
+
+
+
+
 
 class Classscreen extends StatefulWidget {
   const Classscreen({super.key});
@@ -10,6 +19,9 @@ class Classscreen extends StatefulWidget {
 }
 
 class _Classscreen extends State<Classscreen> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -21,12 +33,12 @@ class _Classscreen extends State<Classscreen> {
           centerTitle: true,
           title: Text(
             "Mobile App Engineering",
-            style: TextStyle(color: Colors.white, fontSize: 26),
+            style:GoogleFonts.titilliumWeb(textStyle: TextStyle(color: Colors.white, fontSize: 26),),
           ),
           backgroundColor: Color.fromRGBO(54, 174, 226, 0.992),
           leading: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white)),
+              icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white, size: 25,)),
           bottom: TabBar(
               isScrollable: true,
               indicatorColor: Colors.white,
@@ -37,25 +49,25 @@ class _Classscreen extends State<Classscreen> {
                 Tab(
                   child: Text(
                     "quizzes",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: GoogleFonts.titilliumWeb(textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400)),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "statistics",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: GoogleFonts.titilliumWeb(textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400) ),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "resources",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: GoogleFonts.titilliumWeb(textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400) ),
                   ),
                 ),
                 Tab(
                   child: Text(
                     "study technique",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: GoogleFonts.titilliumWeb(textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w400) ),
                   ),
                 )
               ]),
@@ -63,13 +75,13 @@ class _Classscreen extends State<Classscreen> {
         body: TabBarView(
           children: [
             QuizScreen(),
-            Center(
-              child: Text("statistics"),
+            
+            Statistics(
+              questions: questions,
+              score: 6 , // Pass the current score
             ),
             ResourcesPage(),
-            Center(
-              child: Text("study technique"),
-            )
+            StudyTechniquesPage(),
           ],
         ),
       ),

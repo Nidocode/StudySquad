@@ -31,7 +31,7 @@ class profileMenu extends StatelessWidget {
           color: Colors.blueGrey.withOpacity(0.1)
         ),
         child: Icon(
-          icon,color:Color.fromRGBO(0, 120, 204, 100) ,
+          icon,color:Color.fromRGBO(54, 174, 226, 0.992) ,
           ),
         ),
         title: Text(title, style: TextStyle(fontSize: 20,letterSpacing: 1,color:textColor),),
@@ -51,17 +51,18 @@ class profileMenu extends StatelessWidget {
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class profileScreen extends StatelessWidget {
+  const profileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
       leading: Icon(Icons.arrow_back_ios),
       title: Text('profile page'),
       centerTitle: true,
-      backgroundColor: const Color.fromRGBO(0, 120, 204, 100)
+      backgroundColor: const Color.fromRGBO(54, 174, 226, 0.992)
     ),
 
 
@@ -93,7 +94,7 @@ class MyWidget extends StatelessWidget {
           profileMenu(
             title:"year",subtitle:"Sophmore",icon: Icons.grading,onpress: (){},endIcon: true,
           ),
-           const Divider(),
+          const Divider(),
           const SizedBox(height: 10,),
           profileMenu(
             title:"Logout",subtitle:"want to logout?",icon: Icons.logout,onpress: (){},endIcon: false,textColor: Colors.red,

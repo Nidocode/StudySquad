@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:study_squad/classScreen.dart';
 import 'package:study_squad/firstScreen.dart';
 import 'package:study_squad/loginScreen.dart';
+import 'package:study_squad/profileScreen.dart';
 import 'package:study_squad/signupScreen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -28,16 +28,11 @@ class MyApp extends StatelessWidget {
       initialRoute: "classScreen",
       routes: {
         "/": (context) => const firstscreen(),
-        "classScreen":(context) => const Classscreen(),
+        "classScreen": (context) => const Classscreen(),
         "login": (context) => const Loginscreen(),
-        "signup" : (context) => const Signupscreen(),
-        
-        
+        "signup": (context) => const Signupscreen(),
+        "profileScreen": (context) => const profileScreen(),
       },
     );
   }
 }
-
-
-
-
