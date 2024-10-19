@@ -148,25 +148,28 @@ class _QuizScreenState extends State<QuizScreen> {
             SizedBox(
               height: 15,
             ),
-            Expanded(
-              child: ListView.builder(
-                shrinkWrap: true, // because this listView is inside a column
-                itemCount: question.options.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: selectedCurrentAnswerIndex ==
-                            null // (meaning if the user hasn't selected an answer yet)
-                        ? () => pickAnswer(index)
-                        : null, // (indicating that the user has already selected an answer), the expression evaluates to null to disable the button
-                    child: AnswerCard(
-                      currentIndex: index,
-                      option: question.options[index],
-                      isSelected: selectedCurrentAnswerIndex == index,
-                      selectedAnswerIndex: selectedCurrentAnswerIndex,
-                      correctAnswerIndex: question.answerIndex,
-                    ),
-                  );
-                },
+            SizedBox(
+              height: 380,
+              child: Expanded(
+                child: ListView.builder(
+                  shrinkWrap: true, // because this listView is inside a column
+                  itemCount: question.options.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: selectedCurrentAnswerIndex ==
+                              null // (meaning if the user hasn't selected an answer yet)
+                          ? () => pickAnswer(index)
+                          : null, // (indicating that the user has already selected an answer), the expression evaluates to null to disable the button
+                      child: AnswerCard(
+                        currentIndex: index,
+                        option: question.options[index],
+                        isSelected: selectedCurrentAnswerIndex == index,
+                        selectedAnswerIndex: selectedCurrentAnswerIndex,
+                        correctAnswerIndex: question.answerIndex,
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
             

@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:study_squad/classTabs/quiz/question.dart';
-import 'package:study_squad/classTabs/quiz/quizzes.dart';
+
 
 class CardWidget extends StatelessWidget {
   CardWidget(

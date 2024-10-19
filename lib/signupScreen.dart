@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/loginScreen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:study_squad/loginScreen.dart';
+
 
 class Signupscreen extends StatefulWidget {
   const Signupscreen({Key? key}) : super(key: key);
@@ -28,19 +30,19 @@ class SignUpForm extends State<Signupscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:Colors.white,
-       appBar: AppBar(
+      appBar: AppBar(
           elevation: 3,
-          backgroundColor: Color.fromRGBO(0, 142, 204, 1),
+          backgroundColor: Color.fromRGBO(54, 174, 226, 0.992),
           leading: IconButton(
             onPressed: () {Navigator.pushNamed(context, "/");},
             icon: Icon(
               Icons.arrow_back_ios_sharp,
               color: Colors.white,
-              size: 40,
+              size: 25,
             ),
             padding: EdgeInsets.all(10),
           ),
-       ),
+      ),
       body: SingleChildScrollView(
         child:  Padding(padding: const EdgeInsets.all(16),
       child: Form(
@@ -60,7 +62,7 @@ class SignUpForm extends State<Signupscreen> {
           padding: EdgeInsets.fromLTRB(50, 0, 50, 10),
           child: Text(
             "Creat a new account",
-            style: TextStyle(fontSize: 18),
+            style: GoogleFonts.titilliumWeb(textStyle:TextStyle(fontSize: 18) ),
           ),
         ),
         Container(
@@ -68,12 +70,12 @@ class SignUpForm extends State<Signupscreen> {
           padding: EdgeInsets.fromLTRB(58, 10, 80, 15),
           child: TextFormField(
             textInputAction: TextInputAction.next,
-            cursorColor: Color.fromRGBO(0, 142, 204, 1),
+            cursorColor: Color.fromRGBO(54, 174, 226, 0.992),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.all(15),
               hintText: "Username",
-              prefixIcon: Icon(Icons.person),
-              prefixIconColor: Color.fromRGBO(0, 142, 204, 1),
+              prefixIcon: Icon(Icons.person, size: 20),
+              prefixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
             ),
             onChanged: (value){
                 setState(() {
@@ -95,12 +97,12 @@ class SignUpForm extends State<Signupscreen> {
             controller: emailController,
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
-            cursorColor: Color.fromRGBO(0, 142, 204, 1),
+            cursorColor: Color.fromRGBO(54, 174, 226, 0.992),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.all(15),
               hintText: "Email",
-              prefixIcon: Icon(Icons.email_rounded),
-              prefixIconColor: Color.fromRGBO(0, 142, 204, 1),
+              prefixIcon: Icon(Icons.email_rounded, size: 20),
+              prefixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
             ),
             validator: (value) {
               if(value == null || value.isEmpty){
@@ -123,15 +125,15 @@ class SignUpForm extends State<Signupscreen> {
             decoration: InputDecoration(
               contentPadding: EdgeInsets.all(15),
               hintText: 'Password',
-              prefixIcon: Icon(Icons.lock_rounded),
-              prefixIconColor: Color.fromRGBO(0, 142, 204, 1),
+              prefixIcon: Icon(Icons.lock_rounded, size: 20),
+              prefixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
               suffixIcon: IconButton(
-                icon: Icon(
+                icon: Icon( size: 20,
                   _obscureText ? Icons.visibility_off :Icons.visibility,
                 ),
                 onPressed: _togglePasswordVisibility,
               ),
-              suffixIconColor: Color.fromRGBO(0, 142, 204, 1),
+              suffixIconColor: Color.fromRGBO(54, 174, 226, 0.992),
             ),
             onChanged: (value){
                 setState(() {
@@ -151,6 +153,7 @@ class SignUpForm extends State<Signupscreen> {
         ),
 
 
+
         Container(
           width: 220, 
           height: 70, 
@@ -161,21 +164,22 @@ class SignUpForm extends State<Signupscreen> {
               _formGlobalKey.currentState!.validate();
             }, 
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Color.fromRGBO(0, 142, 204, 1)),
+              backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),
               shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(13))),
             ),
             child: Text(
               "SIGNUP",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
+              style: GoogleFonts.titilliumWeb(textStyle:TextStyle(
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color:Color.fromARGB(255, 255, 255, 255),
                 letterSpacing: 2,
               ),
-            ),
+            ) ),
           ),
         ),
+
         Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -196,13 +200,13 @@ class SignUpForm extends State<Signupscreen> {
                 },
                 child: Text(
                   "Login",
-                  style: TextStyle(
+                  style: GoogleFonts.titilliumWeb(textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(0, 142, 204, 1),
+                    color: Color.fromRGBO(54, 174, 226, 0.992),
                     fontSize: 14.5,
                     decoration: TextDecoration.underline,
-                    decorationColor: Color.fromRGBO(0, 142, 204, 1),
-                  ),
+                    decorationColor: Color.fromRGBO(54, 174, 226, 0.992),
+                  )),
                 ),
               ),
             ],

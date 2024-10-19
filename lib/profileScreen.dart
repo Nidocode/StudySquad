@@ -59,8 +59,8 @@ class profileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-      leading: Icon(Icons.arrow_back_ios),
-      title: Text('profile page'),
+      leading: Icon(Icons.arrow_back_ios, color: Colors.white,size: 25,),
+      title: Text('profile page', style: TextStyle(fontSize: 26,color: Colors.white),),
       centerTitle: true,
       backgroundColor: const Color.fromRGBO(54, 174, 226, 0.992)
     ),
@@ -70,14 +70,15 @@ class profileScreen extends StatelessWidget {
     body:SingleChildScrollView(
       child: Column(
         children: [
+          SizedBox(height: 10,),
           SizedBox(
-            width: 120, height: 120,
+            width: 110, height: 110,
             child:ClipRRect(borderRadius:BorderRadius.circular(100),
             child:Image.network("https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="),
             ),
           ),
           const SizedBox(height: 10,),
-          Text('Student Name',style:TextStyle(fontSize: 20),),
+          Text('Student Name',style:TextStyle(fontSize: 20 ),),
           const SizedBox(height: 30,),
           const Divider(),
           const SizedBox(height: 30,),
