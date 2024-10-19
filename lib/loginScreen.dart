@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_squad/homepage.dart';
 import 'package:study_squad/signupScreen.dart';
 
 
@@ -91,6 +92,7 @@ class LoginscreenState extends State<Loginscreen> {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.fromLTRB(58, 15, 80, 0),
               child: TextFormField(
+                controller: passController,
                 obscureText: _obscureText, //the password hiddden
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(15),
@@ -118,6 +120,7 @@ class LoginscreenState extends State<Loginscreen> {
                     return 'Password is invalid';
                   }
                   return null;
+                  
                 },
               ),
             ),
@@ -145,7 +148,13 @@ class LoginscreenState extends State<Loginscreen> {
               margin: EdgeInsets.fromLTRB(50, 25, 50, 15),
               child: ElevatedButton(
                 onPressed: (){
-                  _formGlobalKey.currentState!.validate();
+                  if(_formGlobalKey.currentState!.validate() ){
+                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) =>  Homepage(),
+                                  ),
+                                );
+              }
                 }, 
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),

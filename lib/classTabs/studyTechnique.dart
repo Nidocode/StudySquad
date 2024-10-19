@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StudyTechniquesPage extends StatelessWidget {
   const StudyTechniquesPage({super.key});
@@ -67,15 +68,15 @@ Widget buildStudyTechniqueCard(String title, String description, String goodFor)
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style:GoogleFonts.titilliumWeb(textStyle:const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
-                  ),
+                  ) ) ,
                 ),
                 const SizedBox(height: 8),
-                Text(description),
+                Text(description, style: GoogleFonts.titilliumWeb( textStyle: TextStyle(fontWeight: FontWeight.bold)),),
                 const SizedBox(height: 8),
-                Text('$goodFor'),
+                Text('$goodFor',style: GoogleFonts.titilliumWeb( )),
               ],
             ),
         ),

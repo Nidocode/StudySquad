@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_squad/homepage.dart';
 import 'package:study_squad/loginScreen.dart';
 
 
@@ -161,7 +162,13 @@ class SignUpForm extends State<Signupscreen> {
           margin: EdgeInsets.fromLTRB(50, 20, 50, 15),
           child: ElevatedButton(
             onPressed: (){
-              _formGlobalKey.currentState!.validate();
+              if(_formGlobalKey.currentState!.validate()){
+                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) =>  Homepage(),
+                                  ),
+                                );
+              }
             }, 
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Color.fromRGBO(54, 174, 226, 0.992)),

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:study_squad/classScreen.dart';
 import 'package:study_squad/firstScreen.dart';
+import 'package:study_squad/homepage.dart';
 import 'package:study_squad/loginScreen.dart';
 import 'package:study_squad/profileScreen.dart';
 import 'package:study_squad/signupScreen.dart';
@@ -25,13 +26,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: "classScreen",
+      initialRoute: "/",
       routes: {
         "/": (context) => const firstscreen(),
         "classScreen": (context) => const Classscreen(),
         "login": (context) => const Loginscreen(),
         "signup": (context) => const Signupscreen(),
         "profileScreen": (context) => const profileScreen(),
+        "homeScreen": (context) => const Homepage(),
       },
     );
   }

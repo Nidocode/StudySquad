@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:study_squad/firstScreen.dart';
+import 'package:study_squad/homepage.dart';
 
 class profileMenu extends StatelessWidget {
   const profileMenu({
@@ -59,7 +61,11 @@ class profileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-      leading: Icon(Icons.arrow_back_ios, color: Colors.white,size: 25,),
+      leading: IconButton(onPressed: (){Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => Homepage(),
+                                  ),
+                                );} , icon:  Icon(Icons.arrow_back_ios, color: Colors.white,size: 25,)),
       title: Text('profile page', style: TextStyle(fontSize: 26,color: Colors.white),),
       centerTitle: true,
       backgroundColor: const Color.fromRGBO(54, 174, 226, 0.992)
@@ -98,7 +104,11 @@ class profileScreen extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 10,),
           profileMenu(
-            title:"Logout",subtitle:"want to logout?",icon: Icons.logout,onpress: (){},endIcon: false,textColor: Colors.red,
+            title:"Logout",subtitle:"want to logout?",icon: Icons.logout,onpress: (){Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => firstscreen(),
+                                  ),
+                                );},endIcon: false,textColor: Colors.red,
           ),
 
           

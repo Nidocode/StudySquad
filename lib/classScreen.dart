@@ -6,6 +6,7 @@ import 'package:study_squad/classTabs/quiz/quizzes.dart';
 import 'package:study_squad/classTabs/resources.dart';
 import 'package:study_squad/classTabs/statistics.dart';
 import 'package:study_squad/classTabs/studyTechnique.dart';
+import 'package:study_squad/homepage.dart';
 
 
 
@@ -37,7 +38,11 @@ class _Classscreen extends State<Classscreen> {
           ),
           backgroundColor: Color.fromRGBO(54, 174, 226, 0.992),
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) =>  Homepage(),
+                                  ),
+                                );},
               icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white, size: 25,)),
           bottom: TabBar(
               isScrollable: true,
